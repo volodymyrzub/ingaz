@@ -8,8 +8,6 @@ body {
 }
 
 header {
-	width: 100%;
-	position: absolute;
 	z-index: 2;
 	min-height: 100px;
 	border-bottom: 2px solid rgba(255, 255, 255, .5);
@@ -18,13 +16,22 @@ header {
 
 .navbar-collapse.collapse {
 	list-style: none;
+	padding-top: 30px;
+	text-align: center;
 	li {
 		display: inline-block;
+		a {
+			color: #fff;
+			font-size: 1em;
+			text-transform: uppercase;
+			padding: 0 5px;
+		}
 	}
 }
 
 .navbar-control {
 		list-style: none;
+		padding-top: 30px;
 		li {
 			display: inline-block;
 		}
@@ -49,7 +56,6 @@ header {
 }
 
 .carousel {
-	top: -100px;
 	.carousel-indicators li {
 		height: 28px;
 		width: 28px;
@@ -97,6 +103,79 @@ header {
 	ul {
 		li{
 			display: inline-block;}
+		}
+	}
+
+	.section {
+		h2 {
+			color: #4e5c63;
+			font-size: 2.75em;
+			padding-top: 30px;
+			padding-bottom: 21px;
+			font-weight: 600;
+			text-transform: uppercase;
+			display: inline-block;
+			z-index: 2;
+			background-color: #ffffff;
+		}
+	}
+
+	.using-products {
+		@extend .section
+	}
+
+	.product-info {
+			margin-bottom: 4em;
+			.title {
+			font-size: 1.5em;
+			font-weight: 600;
+			text-transform: uppercase;
+			color: #37c3eb;
+			text-align: center;
+			padding-top: 2.5em;
+		}
+		.desc {
+			padding-top: 1.2em;
+			color: #7e8b96;
+			font-size: 1em;
+			font-weight: 400;
+			line-height: 1.5em;
+		}
+	}
+
+	.red-top-line img{
+		border-top: 3px solid #e94f50;
+	}
+
+		.blue-top-line img{
+		border-top: 3px solid #3ac2e8;
+	}
+
+		.green-top-line img{
+		border-top: 3px solid #6cc437
+	}
+
+	.devider {
+		position: absolute;
+		width: 100%;
+		height: 21px;
+		top: 76px;
+		z-index: -1;
+		.line {
+			z-index: -1;
+			display: block;
+			padding-top: 5px;
+			border-top: 2px solid #e4e8eb;
+		}
+	}
+
+	.news {
+		@extend .section
+	}
+
+	.news {
+		.devider {
+			margin-left: 240px;
 		}
 	}
 

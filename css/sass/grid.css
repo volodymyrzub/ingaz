@@ -1,10 +1,9 @@
-@media (max-width: 1199px) {
+@media (max-width: 991px) {
   .navbar-control {
-    float: right;
-    display: inline-block;
-    width: 100px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin: 0; } }
+    padding-left: 0;
+    text-align: right; }
+    .navbar-control a.btn-search {
+      padding: 5px 5px;
+      margin-right: 0; } }
 
 /*# sourceMappingURL=grid.css.map */
