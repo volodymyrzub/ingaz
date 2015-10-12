@@ -1,4 +1,5 @@
 @import 'sass/variables';
+@import 'sass/_mixins';
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700italic,700,800,800italic);
 
 body {
@@ -178,5 +179,5 @@ header {
 			margin-left: 240px;
 		}
 	}
-
+@import '_news';
 @import 'sass/grid';
