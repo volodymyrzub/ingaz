@@ -195,7 +195,8 @@ header {
 		}
 	}
 
-	.news {
+	.news,
+	.products {
 		@extend .section
 	}
 
@@ -204,5 +205,66 @@ header {
 			margin-left: 240px;
 		}
 	}
+
+	.products {
+		.devider {
+			margin-left: 300px;
+		}
+	}
+
+	.img-responsive {
+		max-width: 100%;
+		height: auto;
+	}
+
+	.large-block {
+		float: left;
+		width: 66.5%;
+		margin-right: 0.5%;
+		height: 270px;
+		margin-bottom: 10px;
+		overflow: hidden;
+		
+		img {
+			@extend .img-responsive
+		}
+	}
+
+	.small-block {
+		float: left; 
+		width: 33%;
+		height: 270px;
+		margin-right: 0.5%;
+		margin-bottom: 10px;
+		overflow: hidden;
+		img {
+			@extend .img-responsive
+		}
+	}
+
+	.mini-block {
+		width: 49.5%;
+		height: 49.5%;
+		float: left;
+		overflow: hidden;
+		img {
+			@extend .img-responsive
+		}
+	}
+
+	.mini-block:nth-child(odd) {
+		margin-right: 1%;
+	}
+
+	.mini-block:nth-child(1),
+	.mini-block:nth-child(2) {
+		margin-bottom: 1%;
+	}
+
+	.small-block:last-child {
+		margin-right: 0;
+	}
+
+
 @import '_news';
 @import 'sass/grid';
