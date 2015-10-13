@@ -14,47 +14,79 @@ header {
 	border-bottom: 2px solid rgba(255, 255, 255, .5);
 	background-color: #fc0dcc;
 }
+/*navbar styles *******/
+.dark-nav{
+  background-color: rgba(0,0,0,.7) !important;
 
-.navbar-collapse.collapse {
-	list-style: none;
-	padding-top: 30px;
-	text-align: center;
-	li {
-		display: inline-block;
-		a {
-			color: #fff;
-			font-size: 1em;
-			text-transform: uppercase;
-			padding: 0 5px;
-		}
-	}
+}
+.navbar-brand{
+  padding:15px 15px 0;
+}
+.navbar-default{
+  background-image: none;
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  .navbar-nav{
+    >li{
+
+      &.active >a, &.active >a:hover, &.active >a:focus{
+        @extend %nav-links-state;
+      }
+
+      >a{
+        margin-top: 25px;
+        color: #fff;
+        text-transform: uppercase;
+        font-size:em(14);
+        padding:15px 0px;
+        &:hover, &:focus{
+          @extend %nav-links-state;
+        }
+
+      }
+      &:last-child a{
+        margin-right: 0;
+      }
+    }
+  }
+  .navbar-languages{
+
+    > li {
+
+      >a{
+        padding:5px;
+        border:1px solid;
+        margin-right:10px;
+        margin-top:30px;
+        -webkit-border-radius:3px;
+        -moz-border-radius:3px;
+        border-radius:3px;
+        &:hover, &:focus{
+          background-color: #39A1CE;
+          border-color: #39A1CE;
+        }
+      }
+      &:first-child a{
+        margin-right:30px;
+      }
+      &:last-child a{
+        margin-right: 0;
+      }
+    }
+
+  }
+  .navbar-main >li>a{
+    margin-right:35px;
+  }
+
 }
 
-.navbar-control {
-		list-style: none;
-		padding-top: 30px;
-		li {
-			display: inline-block;
-		}
-	a.btn-language,
-	a.btn-search {
-		overflow: hidden;
-		padding: 5px 3px;
-		border: 1px solid #fff;
-		border-radius: 2px;
-		text-transform: uppercase;
-		&:hover {
-			background-color: #37c3eb;
-			border: 1px solid transparent;
-			text-decoration: none;
-			transition: all .2s;
-		}
-	}
-	a.btn-search {
-		padding: 5px 5px;
-		margin-right: 20px;
-	}
-}
+
 
 .carousel {
 	.carousel-indicators li {
@@ -100,14 +132,7 @@ header {
 	}
 }
 
-.navbar-collapse {
-	ul {
-		li{
-			display: inline-block;}
-		}
-	}
-
-	.section {
+.section {
 		h2 {
 			color: #4e5c63;
 			font-size: 2.75em;
