@@ -24,8 +24,36 @@
     .social ul
       > li{
         display: inline-block;
+        margin-right:20px;
+
+        &:last-child{
+          margin-right: 0;
+        }
+
       }
+
+    .common-interest{
+      h2{
+        text-align: center;
+        font-size: em(20);
+      }
+
+      .common-post{
+        margin-bottom:20px;
+      }
+
+    }
+
+    .contact-manager{
+      margin-bottom: 20px;
+    }
 
   }
 
+}
+
+@media (max-width: 479px) {
+  .news-page header h2{
+    font-size:em(30);
+  }
 }
