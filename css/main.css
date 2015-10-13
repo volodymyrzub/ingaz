@@ -1,4 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700italic,700,800,800italic);
+.navbar-default .navbar-nav > li.active > a, .navbar-default .navbar-nav > li.active > a:hover, .navbar-default .navbar-nav > li.active > a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid #39A1CE;
+  color: #fff;
+}
+
 body {
   font-size: 16px;
   color: #fff;
@@ -12,52 +19,63 @@ header {
   background-color: #fc0dcc;
 }
 
-.navbar-collapse.collapse {
-  list-style: none;
-  padding-top: 30px;
-  text-align: center;
+/*navbar styles *******/
+.dark-nav {
+  background-color: rgba(0, 0, 0, 0.7) !important;
 }
 
-.navbar-collapse.collapse li {
-  display: inline-block;
+.navbar-brand {
+  padding: 15px 15px 0;
 }
 
-.navbar-collapse.collapse li a {
+.navbar-default {
+  background-image: none;
+  background-color: transparent;
+  border-color: transparent;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.navbar-default .navbar-nav > li > a {
+  margin-top: 25px;
   color: #fff;
-  font-size: 1em;
   text-transform: uppercase;
-  padding: 0 5px;
+  font-size: 0.875em;
+  padding: 15px 0px;
 }
 
-.navbar-control {
-  list-style: none;
-  padding-top: 30px;
+.navbar-default .navbar-nav > li:last-child a {
+  margin-right: 0;
 }
 
-.navbar-control li {
-  display: inline-block;
+.navbar-default .navbar-languages > li > a {
+  padding: 5px;
+  border: 1px solid;
+  margin-right: 10px;
+  margin-top: 30px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
-.navbar-control a.btn-language,
-.navbar-control a.btn-search {
-  overflow: hidden;
-  padding: 5px 3px;
-  border: 1px solid #fff;
-  border-radius: 2px;
-  text-transform: uppercase;
+.navbar-default .navbar-languages > li > a:hover, .navbar-default .navbar-languages > li > a:focus {
+  background-color: #39A1CE;
+  border-color: #39A1CE;
 }
 
-.navbar-control a.btn-language:hover,
-.navbar-control a.btn-search:hover {
-  background-color: #37c3eb;
-  border: 1px solid transparent;
-  text-decoration: none;
-  transition: all 0.2s;
+.navbar-default .navbar-languages > li:first-child a {
+  margin-right: 30px;
 }
 
-.navbar-control a.btn-search {
-  padding: 5px 5px;
-  margin-right: 20px;
+.navbar-default .navbar-languages > li:last-child a {
+  margin-right: 0;
+}
+
+.navbar-default .navbar-main > li > a {
+  margin-right: 35px;
 }
 
 .carousel .carousel-indicators li {
@@ -104,10 +122,6 @@ header {
   font-style: italic;
   font-weight: 300;
   padding-top: 2em;
-}
-
-.navbar-collapse ul li {
-  display: inline-block;
 }
 
 .section h2, .using-products h2, .news h2 {
@@ -479,14 +493,33 @@ footer .footer-right-side .blue-btn {
   margin: 15px 0 40px 0;
 }
 
-@media (max-width: 991px) {
-  .navbar-control {
-    padding-left: 0;
-    text-align: right;
+@media (max-width: 1199px) {
+  .navbar-default .navbar-main > li > a {
+    margin-right: 20px;
   }
-  .navbar-control a.btn-search {
-    padding: 5px 5px;
-    margin-right: 0;
+}
+
+@media (max-width: 991px) {
+  .navbar-header {
+    width: 15%;
+  }
+  .navbar-collapse {
+    width: 85%;
+    float: left;
+  }
+  .navbar-default .navbar-main > li > a {
+    margin-top: 12px;
+    font-size: 0.75em;
+    margin-right: 15px;
+  }
+  .navbar-default .navbar-languages > li > a {
+    font-size: 0.75em;
+    margin-right: 5px;
+    padding: 2px;
+    margin-top: 22px;
+  }
+  .navbar-default .navbar-languages > li:first-child a {
+    margin-right: 20px;
   }
   .news-page .social ul
 > li {
@@ -507,10 +540,61 @@ footer .footer-right-side .blue-btn {
   .news-page .contact-manager {
     margin-bottom: 20px;
   }
+  footer .footer-left-side .input-group {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-header, .navbar-collapse {
+    width: 100%;
+  }
+  .navbar-collapse {
+    float: none;
+    border-top: none;
+    box-shadow: none;
+    margin-top: 20px;
+  }
+  .navbar-default .navbar-toggle {
+    margin-top: 30px;
+    margin-right: 0;
+  }
+  .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+  }
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: transparent;
+  }
+  .navbar-default .navbar-nav > li > a {
+    margin: 0 0 0 20px;
+  }
+  .navbar-default .navbar-main > li > a {
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+  }
+  .navbar-default .navbar-languages > li {
+    display: inline-block;
+  }
+  .navbar-default .navbar-languages > li a {
+    padding: 10px;
+  }
+  footer {
+    background: #28a9c9;
+  }
+  footer .input-group-btn {
+    display: block;
+    margin-top: 10px;
+  }
+  footer .footer-right-side .text-right {
+    text-align: left;
+  }
 }
 
 @media (max-width: 479px) {
   .news-page header h2 {
     font-size: 1.875em;
+  }
+  footer .footer-right-side .text-right {
+    text-align: center;
   }
 }

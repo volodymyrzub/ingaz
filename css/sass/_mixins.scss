@@ -3,3 +3,9 @@ $browser-context: 16;
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em
 }
+%nav-links-state{
+  outline:none;
+  background-color: transparent;
+  border-bottom:2px solid #39A1CE;
+  color: #fff;
+}
