@@ -14,6 +14,33 @@ header {
 	border-bottom: 2px solid rgba(255, 255, 255, .5);
 	background-color: #fc0dcc;
 }
+
+h2.inner-page{
+	text-transform: uppercase;
+	font-size: em(44);
+	margin: 0;
+	font-weight: 600;
+	color: $heading-color;
+}
+
+.date{
+	color: $secondary-color;
+	font-size: em(18);
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.back-to-top{
+	border: 2px solid #56cbee;
+	padding: 10px 20px;
+	display: block;
+	margin-bottom: 60px;
+	float: right;
+	i{
+		font-size: 50px;
+		vertical-align: middle;
+	}
+}
 /*navbar styles *******/
 .dark-nav{
   background-color: rgba(0,0,0,.7) !important;
@@ -359,4 +386,5 @@ header {
 
 
 @import '_news';
+@import '_search';
 @import 'sass/grid';

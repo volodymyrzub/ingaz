@@ -1,0 +1,40 @@
+.search-page{
+	color: #7e8b96;
+	
+	header{
+		@include header-styles("../img/search-header-bg.jpg");
+	}
+	
+	.search-results h2 {
+		margin-bottom: 50px;
+	}
+
+	.search-results_finded{
+		box-shadow: 1.509px -1.312px 2.97px -1px rgba(229, 229, 229, 0.95);
+		padding: 0 0 40px;
+		margin-bottom: 20px;
+
+		.date{
+			padding-top: 15px;
+		}
+
+		h3{
+			
+			a{
+				color: $heading-color;
+			}
+
+			text-transform: uppercase;
+			font-weight: 600;
+			margin-bottom: 30px;
+			margin-top: 0;
+			
+			&:hover a{
+				color: #37c3eb;
+			}
+
+		}
+
+	}
+
+}

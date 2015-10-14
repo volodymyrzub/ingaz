@@ -3,6 +3,23 @@ $browser-context: 16;
 @function em($pixels, $context: $browser-context) {
   @return #{$pixels/$context}em
 }
+@mixin header-styles($bg-url){
+	max-height: 420px;
+	height: 420px;
+	width: 100%;
+	background-image: url($bg-url);
+	background-size: cover;
+	position: relative;
+	margin-bottom: 50px;
+	h2{
+		position: absolute;
+		top:50%;
+		margin-top: -48px;
+		padding-left: 20px;
+		color: #fff;
+	}
+}
+
 %nav-links-state{
   outline:none;
   background-color: transparent;

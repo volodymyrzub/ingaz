@@ -9,4 +9,10 @@ $(document).ready(function (){
             $('.navbar-default').removeClass('dark-nav');
         }
     });
+
+    $(".back-to-top").click(function() {
+		  $("html, body").animate({ scrollTop: 0 }, "slow");
+		  return false;
+		});
+
 });
