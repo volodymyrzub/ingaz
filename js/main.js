@@ -1,6 +1,6 @@
 $(document).ready(function (){
-   var nav = $('.navbar-default').offset().top;
-
+   var nav = $('.navbar-default').height();
+   console.log(nav);
     $(document).scroll(function(){
         if($(this).scrollTop() > nav)
         {
